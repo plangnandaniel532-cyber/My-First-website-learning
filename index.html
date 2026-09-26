@@ -4,119 +4,64 @@
 <title>Daniel - Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-  }
-  .card {
-    background: white;
-    color: #333;
-    padding: 25px;
-    border-radius: 20px;
-    max-width: 500px;
-    margin: 20px auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  }
-  img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #667eea;
-    object-fit: cover;
-  }
-  h1 { margin: 10px 0; }
-  .buttons a {
-    display: inline-block;
-    margin: 8px;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  .whatsapp { background: #25D366; }
-  .tiktok { background: #000000; }
-  .portfolio { text-align: left; }
-  .portfolio h2 {
-    color: #667eea;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 5px;
-  }
-  /* ANIMATION STYLES */
-  .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
-  .reveal.active { opacity: 1; transform: translateY(0); }
-  .skill-bar { background: #eee; border-radius: 10px; overflow: hidden; height: 10px; margin-top: 5px; margin-bottom: 15px; }
-  .skill-fill { height: 100%; background: linear-gradient(90deg, #25D366, #128C7E); width: 0; transition: width 1.5s ease; }
-  .project-card {
-    background: #f5f5ff;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 15px 0;
-    border-left: 4px solid #667eea;
-  }
-  .project-card a { color: #667eea; font-weight: bold; text-decoration: none; }
+  body { background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; margin: 0; }
+ .card { background: white; color: #333; padding: 25px; border-radius: 20px; max-width: 500px; margin: 20px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #667eea; object-fit: cover; }
+  h1 { margin: 10px 0; min-height: 40px; }
+ .buttons a { display: inline-block; margin: 8px; padding: 12px 20px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; }
+ .whatsapp { background: #25D366; }
+ .tiktok { background: #000000; }
+ .portfolio { text-align: left; }
+ .portfolio h2 { color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px; }
+ .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+ .reveal.active { opacity: 1; transform: translateY(0); }
+ .skill-bar { background: #eee; border-radius: 10px; overflow: hidden; height: 10px; margin-top: 5px; margin-bottom: 15px; }
+ .skill-fill { height: 100%; background: linear-gradient(90deg, #25D366, #128C7E); width: 0; transition: width 1.5s ease; }
+ .project-card { background: #f5f5ff; padding: 15px; border-radius: 12px; margin: 15px 0; border-left: 4px solid #667eea; }
+ .project-card a { color: #667eea; font-weight: bold; text-decoration: none; }
+  #typed::after { content: '|'; animation: blink 0.7s infinite; color: #667eea; }
+  @keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
 </style>
 </head>
 <body>
-
   <div class="card">
     <img src="photo.jpg" alt="Daniel">
-    <h1>Daniel Plangnan 👋</h1>
+    <h1><span id="typed"></span> 👋</h1>
     <p>Web Developer in training | Plateau, Nigeria</p>
-    
     <div class="buttons">
       <a class="whatsapp" href="https://wa.me/2349066536496?text=Hi%20Daniel!%20I%20saw%20your%20portfolio" target="_blank">WhatsApp Me</a>
       <a class="tiktok" href="https://tiktok.com/@Novae" target="_blank">TikTok</a>
     </div>
   </div>
-
   <div class="card portfolio">
     <h2>About Me</h2>
-    <p>I am a passionate Front-End Developer based in Plateau, Nigeria. I specialize in building fast, modern, and mobile-friendly websites that help individuals and small businesses stand out online.<br><br>💻 What I do: Clean landing pages, personal portfolios, and business websites that work perfectly on phone and laptop.<br><br>🚀 Built this portfolio 100% from my phone with HTML, CSS & GitHub Pages — proving that great work has no limits.</p></p>
+    <p>I am a passionate Front-End Developer based in Plateau, Nigeria. I specialize in building fast, modern, and mobile-friendly websites that help individuals and small businesses stand out online.<br><br>💻 What I do: Clean landing pages, personal portfolios, and business websites that work perfectly on phone and laptop.<br><br>🚀 Built this portfolio 100% from my phone with HTML, CSS & GitHub Pages — proving that great work has no limits.</p>
   </div>
-
-  <div class="card portfolio reveal" id="skills">
+  <div class="card portfolio reveal">
     <h2>⚡ My Real Skills</h2>
-    <p>HTML 90%</p>
-    <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
-    <p>CSS 80%</p>
-    <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
-    <p>GitHub Pages 85%</p>
-    <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-    <p>Responsive Design 75%</p>
-    <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+    <p>HTML 90%</p><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+    <p>CSS 80%</p><div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+    <p>GitHub Pages 85%</p><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+    <p>Responsive Design 75%</p><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
   </div>
-
-  <div class="card portfolio reveal" id="projects">
+  <div class="card portfolio reveal">
     <h2>🚀 My Projects</h2>
-    <div class="project-card">
-      <h3>1. Personal Portfolio Website</h3>
-      <p>Built live portfolio from phone using HTML/CSS hosted on GitHub Pages. With WhatsApp direct chat.</p>
-      <a href="https://plangnandaniel532-cyber.github.io/My-First-website-learning/" target="_blank">View Live →</a>
-    </div>
-    <div class="project-card">
-      <h3>2. Business Landing Page (Coming Soon)</h3>
-      <p>Next project - landing page for small business in Lagos.</p>
-    </div>
+    <div class="project-card"><h3>1. Personal Portfolio</h3><p>Built live portfolio from phone using HTML/CSS hosted on GitHub Pages.</p><a href="https://plangnandaniel532-cyber.github.io/My-First-website-learning/" target="_blank">View Live →</a></div>
+    <div class="project-card"><h3>2. Business Landing Page (Soon)</h3><p>Next project - landing page for small business in Lagos.</p></div>
   </div>
-
 <script>
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+  function revealOnScroll(){
+    document.querySelectorAll('.reveal').forEach(el=>{
+      if(el.getBoundingClientRect().top < window.innerHeight - 100){
         el.classList.add('active');
-        const fills = el.querySelectorAll('.skill-fill');
-        fills.forEach(f => f.style.width = f.getAttribute('data-width'));
+        el.querySelectorAll('.skill-fill').forEach(f=>f.style.width=f.getAttribute('data-width'));
       }
     });
   }
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
+  const texts=["Daniel Plangnan","A Web Developer","From Plateau, NG"];let i=0,j=0,isDeleting=false;const el=document.getElementById('typed');
+  function typeLoop(){let c=texts[i];if(!isDeleting){el.textContent=c.substring(0,j+1);j++;}else{el.textContent=c.substring(0,j-1);j--;}let s=isDeleting?60:120;if(j===c.length&&!isDeleting){s=1500;isDeleting=true;}else if(j===0&&isDeleting){isDeleting=false;i=(i+1)%texts.length;s=500;}setTimeout(typeLoop,s);}typeLoop();
 </script>
 </body>
 </html>
