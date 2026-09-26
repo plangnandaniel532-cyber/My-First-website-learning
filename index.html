@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My First Website</title>
+<title>Daniel - Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
-    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
   }
-  h1 {
-    font-size: 50px;
-  }
-  p {
-    font-size: 20px;
+  .card {
     background: white;
     color: #333;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #667eea;
+    object-fit: cover;
+  }
+  h1 { margin: 10px 0; }
+  .buttons a {
     display: inline-block;
+    margin: 8px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  .whatsapp { background: #25D366; }
+  .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .portfolio {
+    text-align: left;
+  }
+  .portfolio h2 {
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
   }
 </style>
 </head>
 <body>
-  <h1>Welcome! 👋</h1>
-  <p>I am Daniel, learning web development!</p>
-  <p>🚀 My first website is LIVE!</p>
+
+  <div class="card">
+    <img src="photo.jpg" alt="Daniel">
+    <h1>Daniel Plangnan 👋</h1>
+    <p>Web Developer in training | Lagos, Nigeria</p>
+    
+    <div class="buttons">
+      <a class="whatsapp" href="https://wa.me/2349066536496">WhatsApp Me</a>
+      <a class="tiktok" href="https://tiktok.com/Novae">Tiktok</a>
+    </div>
+  </div>
+
+  <div class="card portfolio">
+    <h2>About Me</h2>
+    <p>I am excited to learn web development. I just built my first live website from my phone!</p>
+    
+    <h2>My Skills</h2>
+    <p>✅ HTML & CSS<br>✅ GitHub Pages<br>✅ Learning JavaScript</p>
+    
+    <h2>Projects</h2>
+    <p>🚀 <b>My First Website</b> - Live at this link!</p>
+  </div>
+
 </body>
 </html>
